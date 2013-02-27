@@ -1,3 +1,3 @@
 source :rubygems
 
-gem 'berkshelf'
+gem 'berkshelf', '= 1.1.6'
