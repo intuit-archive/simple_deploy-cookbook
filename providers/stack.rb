@@ -7,7 +7,7 @@ action :create do
 
   cmd = CreateStack.new.build_command :name              => name,
                                       :environment       => environment,
-                                      :template          => template
+                                      :template          => template,
                                       :inputs            => inputs,
                                       :read_outputs_from => read_outputs_from
 
