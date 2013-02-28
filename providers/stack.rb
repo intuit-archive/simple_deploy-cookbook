@@ -7,11 +7,13 @@ action :create do
 
   cmd = CreateStack.new.build_command :name              => name,
                                       :environment       => environment,
-                                      :template          => template,
+                                      :template          => template
                                       :inputs            => inputs,
                                       :read_outputs_from => read_outputs_from
 
   execute "Creating stack '#{name}'." do
     command cmd
+    not_if StackExists.build_command :name        => name,
+                                     :environment => environment
   end
 end
