@@ -1,9 +1,11 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require '../libraries/create_stack'
-require '../libraries/stack_exists'
-require '../libraries/template'
+libs = File.expand_path("../../libraries", __FILE__)
+
+require "#{libs}/create_stack"
+require "#{libs}/stack_exists"
+require "#{libs}/template"
 
 RSpec.configure do |config|
   #spec config
