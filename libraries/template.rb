@@ -1,4 +1,5 @@
 class Template
+
   def initialize(name)
     @name = name
   end
@@ -6,4 +7,5 @@ class Template
   def location
     File.expand_path("../../cookbooks/", __FILE__) + @name + ".json"
   end
+
 end

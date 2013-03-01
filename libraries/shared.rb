@@ -4,15 +4,15 @@ module Shared
     log log_level, "Executing command: '#{cmd}'."
     `#{cmd}`
     if $?.success?
-      log "Command completed succesfully."
+      log "Command completed succesfully.", log_level
       true
     else
-      log "Command return failure."
+      log "Command returned failure.", log_level
       false
     end
   end
 
-  def log(level, message)
+  def log(message, log_level='info')
     Chef::Log.send log_level, message
   end
 
