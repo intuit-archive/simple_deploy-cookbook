@@ -1,9 +1,9 @@
 class Template
-  def initiative(name)
+  def initialize(name)
     @name = name
   end
 
   def location
-    '/Users/bweaver/code/dsl_example/cookbooks/example/templates/default' + @name + '.json'
+    File.expand_path("../../cookbooks/", __FILE__) + @name + ".json"
   end
 end

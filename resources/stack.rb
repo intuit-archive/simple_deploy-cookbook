@@ -1,4 +1,5 @@
 actions :create
+default_action :create
 
 attribute :environment, :kind_of => String, :default => nil
 attribute :inputs, :kind_of => Hash

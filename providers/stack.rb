@@ -11,6 +11,7 @@ action :create do
                                       :inputs            => inputs,
                                       :read_outputs_from => read_outputs_from
 
+
   execute "Creating stack '#{name}'." do
     command cmd
     not_if StackExists.build_command :name        => name,

@@ -8,9 +8,9 @@ class CreateStack
     read_outputs_from = Array(args[:read_outputs_from])
     template_path     = Template.new(template).location
 
-    cmd = "simple_deploy create -e #{environment} \
-                                -n #{name} \
-                                -t #{template_path}"
+    cmd = "simple_deploy create -e #{environment}"
+    cmd << " -n #{name}"
+    cmd << " -t #{template_path}"
 
     read_outputs_from.each do |stack|
       cmd << " -i #{stack}"

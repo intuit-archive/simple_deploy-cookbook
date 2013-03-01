@@ -9,6 +9,7 @@ describe CreateStack do
                  :inputs            => { 'var1' => 'val1' },
                  :read_outputs_from => ['stack1', 'stack2'] }
   end
+
   it "should return the create stack command" do
     @create_stack.build_command(@options).should == 'test'
   end
