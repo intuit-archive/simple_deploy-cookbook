@@ -5,7 +5,7 @@ class CreateStack
     environment       = args[:environment] ||= 'default'
     template          = args[:template] ||= name
     inputs            = args[:inputs]
-    read_outputs_from = args[:read_outputs_from]
+    read_outputs_from = Array(args[:read_outputs_from])
     template_path     = Template.new(template).location
 
     cmd = "simple_deploy create -e #{environment} \
