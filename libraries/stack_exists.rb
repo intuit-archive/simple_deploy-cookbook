@@ -1,10 +1,11 @@
 class StackExists
 
-  def build_command(args)
+  def exists?(args)
     name              = args[:name]
     environment       = args[:environment]
 
-    "simple_deploy status -e #{environment} -n #{name}"
+    `simple_deploy status -e #{environment} -n #{name}`
+    $?.success?
   end
 
 end

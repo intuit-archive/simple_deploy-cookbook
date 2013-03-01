@@ -14,7 +14,7 @@ action :create do
 
   execute "Creating stack '#{name}'." do
     command cmd
-    not_if StackExists.new.build_command :name        => name,
-                                         :environment => environment
+    not_if { StackExists.new.exists? :name        => name,
+                                     :environment => environment }
   end
 end
