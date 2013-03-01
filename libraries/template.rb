@@ -1,5 +1,9 @@
 class Template
-  def location(name)
-    '/Users/bweaver/code/dsl_example/cookbooks/example/templates/default' + name + '.json'
+  def initiative(name)
+    @name = name
+  end
+
+  def location
+    '/Users/bweaver/code/dsl_example/cookbooks/example/templates/default' + @name + '.json'
   end
 end
