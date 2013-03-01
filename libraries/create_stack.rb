@@ -2,7 +2,7 @@ class CreateStack
 
   def build_command(args)
     name              = args[:name]
-    environment       = args[:environment] ||= 'default'
+    environment       = args[:environment]
     template          = args[:template] ||= name
     inputs            = args[:inputs]
     read_outputs_from = Array(args[:read_outputs_from])
