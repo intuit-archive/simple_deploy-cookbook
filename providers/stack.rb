@@ -1,5 +1,5 @@
 action :create do
-  name              = new_resource.object_name
+  name              = new_resource.name
   environment       = new_resource.environment
   template          = new_resource.template
   inputs            = new_resource.inputs
@@ -14,7 +14,7 @@ action :create do
 
   execute "Creating stack '#{name}'." do
     command cmd
-    not_if StackExists.build_command :name        => name,
-                                     :environment => environment
+    not_if StackExists.new.build_command :name        => name,
+                                         :environment => environment
   end
 end
