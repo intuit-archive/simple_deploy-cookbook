@@ -9,7 +9,7 @@ class StackExists
 
   def shell(cmd, log_level='info')
     Chef::Log.send log_level, cmd
-    `cmd`
+    `#{cmd}`
     $?.success?
   end
 
