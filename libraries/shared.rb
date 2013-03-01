@@ -1,7 +1,7 @@
 module Shared
 
   def shell(cmd, log_level='info')
-    log log_level, "Executing command: '#{cmd}'."
+    log "Executing command: '#{cmd}'.", log_level
     `#{cmd}`
     if $?.success?
       log "Command completed succesfully.", log_level
