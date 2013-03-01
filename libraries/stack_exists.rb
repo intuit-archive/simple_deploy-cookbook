@@ -3,8 +3,8 @@ class StackExists
   include Shared
 
   def exists?(args)
-    name              = args[:name]
-    environment       = args[:environment]
+    environment = args[:environment]
+    name        = args[:name]
 
     result = shell "simple_deploy status -e #{environment} -n #{name}"
 

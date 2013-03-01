@@ -4,8 +4,13 @@ class Template
     @name = name
   end
 
-  def location
-    File.expand_path("../../cookbooks/", __FILE__) + @name + ".json"
+  def location(args)
+    name     = args[:name]
+    cookbook = args[:cookbook]
+
+    cookbook.template_filenames.each do |f|
+      return f if f =~ /^.*#{f}.json$/
+    end
   end
 
 end

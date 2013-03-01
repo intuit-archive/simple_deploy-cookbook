@@ -4,15 +4,14 @@ class CreateStack
 
   def build_command(args)
     name              = args[:name]
-    cookbook_object   = args[:cookbook_object]
+    cookbook          = args[:cookbook]
     environment       = args[:environment]
     template          = args[:template] ||= name
     inputs            = args[:inputs]
     read_outputs_from = Array(args[:read_outputs_from])
 
-    raise cookbook_object.inspect
-
-    template_path     = Template.new(template).location
+    template_path     = Template.new.location :name     => name,
+                                              :cookbook => cookbook
 
     cmd = "simple_deploy create -e #{environment}"
     cmd << " -n #{name}"
