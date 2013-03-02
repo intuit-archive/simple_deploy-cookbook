@@ -1,7 +1,5 @@
 class StackExists
 
-  include Shared
-
   def exists?(args)
     environment = args[:environment]
     name        = args[:name]
