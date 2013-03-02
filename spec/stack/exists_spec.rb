@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe StackExists do
+describe Stack::Exists do
   it "should return the command to check if stack exists" do
-    stack_exists = StackExists.new
+    stack_exists = Stack::Exists.new
     options = { :name        => 'test123',
                 :environment => 'test321' }
     cmd = "simple_deploy status -e test321 -n test123"

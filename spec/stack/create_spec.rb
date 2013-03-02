@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe CreateStack do
+describe Stack::Create do
   before do
-    @create_stack = CreateStack.new
+    @create_stack = Stack::Create.new
     @options = { :object_name       => 'name',
                  :environment       => 'env',
                  :template          => '/tmp/template.json',
