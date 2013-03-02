@@ -4,7 +4,7 @@ Configure Simple Deploy and provides resources to integrate Simple Deploy stack 
 # Requirements
 * Chef 10.x
 
-Platform:
+# Platform:
 * CentOS 6.x
 * RHEL 6.x
 
@@ -13,7 +13,7 @@ Add the simple_deploy cookbook to your role/run_list.
 
 # Attributes
 
-``node['simple_deploy']['version']``` = Version Of Simple Deploy
+```node['simple_deploy']['version']``` = Version Of Simple Deploy
 
 # Recipes
 ## default
@@ -21,7 +21,6 @@ Install Simple Deploy Gem Using System Ruby
 
 # Providers
 ## stack
-
 ### create
 
     simple_deploy_stack "app" do
