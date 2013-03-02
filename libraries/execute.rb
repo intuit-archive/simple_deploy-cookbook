@@ -1,13 +1,13 @@
 class Execute
 
-  def run(cmd, log_level='info')
-    Logger.log "Executing command: '#{cmd}'.", log_level
+  def run(cmd)
+    Logger.log "Executing command: '#{cmd}'."
     `#{cmd}`
     if $?.success?
-      Logger.log "Command completed succesfully.", log_level
+      Logger.log "Command completed succesfully."
       true
     else
-      Logger.log "Command returned failure.", log_level
+      Logger.log "Command returned failure."
       false
     end
   end
