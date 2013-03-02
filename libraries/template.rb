@@ -8,7 +8,7 @@ class Template
       return file if file =~ /^.*#{name}\.json$/
     end
 
-    raise TemplateNotFound.new "Template #{name} not found."
+    raise Exceptions::TemplateNotFound.new "Template #{name} not found."
   end
 
 end

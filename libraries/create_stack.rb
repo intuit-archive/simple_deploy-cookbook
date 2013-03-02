@@ -1,7 +1,5 @@
 class CreateStack
 
-  include Shared
-
   def build_command(args)
     name              = args[:name]
     cookbook          = args[:cookbook]
