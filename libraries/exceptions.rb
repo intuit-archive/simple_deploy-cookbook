@@ -1,4 +1,5 @@
 module Exceptions
+
   class Base < RuntimeError
     attr_accessor :message
 

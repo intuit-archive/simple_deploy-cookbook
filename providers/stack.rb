@@ -8,17 +8,17 @@ action :create do
 
   cookbook_object   = self.run_context.cookbook_collection[cookbook]
 
-  cmd = CreateStack.new.build_command :name              => name,
-                                      :environment       => environment,
-                                      :cookbook          => cookbook_object,
-                                      :template          => template,
-                                      :inputs            => inputs,
-                                      :read_outputs_from => read_outputs_from
+  cmd = Stack::Create.new.build_command :name              => name,
+                                        :environment       => environment,
+                                        :cookbook          => cookbook_object,
+                                        :template          => template,
+                                        :inputs            => inputs,
+                                        :read_outputs_from => read_outputs_from
 
 
   execute "Creating stack '#{name}'." do
     command cmd
-    not_if { StackExists.new.exists? :name        => name,
-                                     :environment => environment }
+    not_if { Stack::Exists.new.exists? :name        => name,
+                                       :environment => environment }
   end
 end

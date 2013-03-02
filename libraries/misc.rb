@@ -1,4 +1,4 @@
-module Shared
+module Misc
 
   def shell(cmd, log_level='info')
     log "Executing command: '#{cmd}'.", log_level

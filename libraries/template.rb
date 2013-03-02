@@ -8,7 +8,9 @@ class Template
       return file if file =~ /^.*#{name}\.json$/
     end
 
-    raise Exceptions::TemplateNotFound.new "Template #{name} not found."
+    msg = "Cloud Fromation Template #{name} not found."
+
+    raise Exceptions::TemplateNotFound.new msg
   end
 
 end
