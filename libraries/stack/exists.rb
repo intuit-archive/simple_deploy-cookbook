@@ -1,19 +1,19 @@
 module Stack
   class Exists
 
-    include Misc
-
     def exists?(args)
       environment = args[:environment]
       name        = args[:name]
 
-      result = shell "simple_deploy status -e #{environment} -n #{name}"
+      execute = Execute.new
+
+      result = execute.run "simple_deploy status -e #{environment} -n #{name}"
 
       if result
-        log "Stack exists."
+        Logger.log "Stack exists."
         true
       else
-        log "Stack does not exist."
+        Logger.log "Stack does not exist."
         false
       end
     end
