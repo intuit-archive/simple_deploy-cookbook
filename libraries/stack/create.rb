@@ -8,7 +8,7 @@ module Stack
       inputs            = args[:inputs]
       read_outputs_from = Array(args[:read_outputs_from])
 
-      template_path = Template.new.location :name     => name,
+      template_path = Template.new.location :name     => template,
                                             :cookbook => cookbook
 
       cmd = "simple_deploy create -e #{environment}"
