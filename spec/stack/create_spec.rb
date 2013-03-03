@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Stack::Create do
   before do
     @create_stack = Stack::Create.new
+    @template_mock = mock 'template'
     Template.stub :new => @template_mock
     @options = { :name              => 'name',
                  :cookbook          => 'cookbook',
