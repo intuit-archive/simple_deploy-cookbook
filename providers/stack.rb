@@ -15,6 +15,7 @@ action :create do
                                         :inputs            => inputs,
                                         :read_outputs_from => read_outputs_from
 
+  Misc.sleep_to_prevent_exceeding_api_threshold
 
   execute "Creating stack '#{name}'." do
     command cmd
