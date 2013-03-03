@@ -12,7 +12,6 @@ Configure Simple Deploy and provides resources to integrate Simple Deploy stack 
 Add the simple_deploy cookbook to your role/run_list.
 
 # Attributes
-
 ```node['simple_deploy']['version']``` = Version Of Simple Deploy
 
 # Recipes
