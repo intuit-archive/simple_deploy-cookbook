@@ -1,9 +1,9 @@
 class Execute
 
   def run(cmd)
-    Chef::Log.send 'info', "Executing command: '#{cmd}'."
+    Chef::Log.info "Executing command: '#{cmd}'."
     `#{cmd}`
-    Chef::Log.send 'debug', "Command returned #{$?.to_i}."
+    Chef::Log.debug "Command returned #{$?.to_i}."
     $?.success?
   end
 

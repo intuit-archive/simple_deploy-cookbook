@@ -5,7 +5,7 @@ describe Stack::Exists do
     @stack_exists = Stack::Exists.new
     @execute_mock = mock 'execute'
     Execute.stub :new => @execute_mock
-    Chef::Log.stub :send => true
+    Chef::Log.stub :debug => true, :info => true
     @options = { :name        => 'test123',
                  :environment => 'test321' }
   end

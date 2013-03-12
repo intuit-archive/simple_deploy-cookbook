@@ -10,10 +10,10 @@ module Stack
       result = execute.run "simple_deploy status -e #{environment} -n #{name}"
 
       if result
-        Chef::Log.send "info", "Stack exists."
+        Chef::Log.info "Stack exists."
         true
       else
-        Chef::Log.send "info", "Stack does not exist."
+        Chef::Log.info "Stack does not exist."
         false
       end
     end
