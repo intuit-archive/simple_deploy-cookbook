@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Execute do
   before do
-    Logger.stub :log => true
+    Chef::Log.stub :send => true
     @execute = Execute.new
   end
 

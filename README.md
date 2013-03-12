@@ -31,8 +31,8 @@ Install Simple Deploy Gem Using System Ruby
       read_outputs_from "CLOUD_FORMATION_OUTPUTS_TO_READ"
     end
 
-* Cookbook can be used to specify a seperate cookbook for Cloud Formation templates.
 * Environment defaults to 'default'.
+* Cookbook (optional) can be used to specify a seperate cookbook for Cloud Formation templates.
 * Template is expected to be in the files directory of the given cookbook (defaults to current cookbook).
 * Inputs is a hash of key / values that will be passed as inputs to the Cloud Formation create command.
 * read_outputs_from is a list (or single string) of templates to read outputs from which are mapped to inputs
