@@ -4,11 +4,7 @@ class Execute
     Chef::Log.send 'info', "Executing command: '#{cmd}'."
     `#{cmd}`
     Chef::Log.send 'debug', "Command returned #{$?.to_i}."
-    if $?.success?
-      true
-    else
-      false
-    end
+    $?.success?
   end
 
 end
