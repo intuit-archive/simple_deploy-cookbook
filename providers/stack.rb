@@ -22,4 +22,7 @@ action :create do
     not_if { Stack::Exists.new.exists? :name        => name,
                                        :environment => environment }
   end
+
+  new_resource.updated_by_last_action(true)
+
 end
