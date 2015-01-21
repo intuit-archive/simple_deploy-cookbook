@@ -1,5 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/intuit/simple_deploy-cookbook.png)](http://travis-ci.org/intuit/simple_deploy-cookbook)
 
+**!!! This project has been deprecated.  We recommend you fork it if you continue to rely upon it. !!!**
+
 # simple_deploy cookbook
 Configure Simple Deploy and provides resources to integrate Simple Deploy stack mgmt into Chef.
 
